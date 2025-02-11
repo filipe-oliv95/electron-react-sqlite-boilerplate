@@ -1,0 +1,30 @@
+appId: com.filipeoliveira.electronrouterdom
+productName: Electron Router DOM vanilla js example
+electronVersion: 31.7.7
+directories:
+  buildResources: build
+files:
+  - "out/**" 
+  - "src/database/**"
+  - "node_modules/better-sqlite3/**/*"
+  - "!**/.vscode/*"
+  - "!electron.vite.config.{js,ts,mjs,cjs}"
+  - "!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}"
+  - "!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}"
+asarUnpack:
+  - "**/*.{node,dll}"
+  - "node_modules/better-sqlite3/**/*"
+win:
+  executableName: electron-router-dom-vanilla-js-example
+mac:
+  category: public.app-category.developer-tools
+  target:
+    - dir
+linux:
+  target:
+    - deb
+  maintainer: filipeoliveira.com
+  synopsis: ${description}
+  category: Utility
+npmRebuild: false
+extraResources: "./demo_table.db"
